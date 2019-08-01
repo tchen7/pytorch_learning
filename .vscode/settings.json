@@ -3,5 +3,5 @@
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
     "python.formatting.provider": "yapf",
-    "python.pythonPath": "D:\\tools\\Anaconda3\\envs\\pytorch\\python.exe"
+    "python.pythonPath": "/anaconda2/envs/pytorch/bin/python"
 }
