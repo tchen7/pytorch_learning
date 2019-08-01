@@ -2,10 +2,12 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
-        # 1 input image channel, 6 output channels, 3*3 square convolution kernel
+        # 1 input image channel, 6 output channels, 3*3 square convolution
+        # kernel
         self.conv1 = nn.Conv2d(1, 6, 3)
         self.conv2 = nn.Conv2d(6, 16, 3)
         # an affine operation: y = W*x + b
@@ -23,4 +25,11 @@ class Net(nn.Module):
         x = F.relu(self.fc2(x))
         x = self.fc3(x)
         return x
+
+
+net = Net()
+print(net)
+params = list(net.parameters())
+print(len(params))
+print(params[0].size())  # conv1's weight
 
